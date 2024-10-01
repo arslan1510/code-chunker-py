@@ -15,7 +15,7 @@ This project implements a simple code chunker using Tree-sitter in Python. It pr
 
 - Python 3.6+
 - tree-sitter
-- tree-sitter-languages (or individual language parsers)
+- tree-sitter-language-pack
 
 ## Installation
 
