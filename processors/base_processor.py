@@ -9,22 +9,6 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def load_query_map():
-    try:
-        with open('query_map.json', 'r') as file:
-            json_str = file.read()
-        
-        query_map = json.loads(json_str)
-        return query_map
-    except IOError as e:
-        logging.error(f"Error reading query_map.json: {str(e)}")
-        return {}
-    except json.JSONDecodeError as e:
-        logging.error(f"Error parsing query_map.json: {str(e)}")
-        return {}
-
-QUERY_MAP = load_query_map()
-
 class BaseProcessor:
     MAX_CHUNK_SIZE: int = 2048
     MIN_CHUNK_SIZE: int = 1024
